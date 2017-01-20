@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.hostname = "rails-dev-box"
+  config.vm.provider :virtualbox do |vb|
+    vb.gui = false
+    vb.memory = 2048
+    vb.name = "railsbox"
+  end
+  config.vm.network :forwarded_port, guest: 80, host: 9001
+  config.vm.synced_folder "data", "/home/vagrant/app"
+  config.vm.provision :shell, path: "provision/setup.sh"
+end
