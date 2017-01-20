@@ -6,6 +6,6 @@
 Now to can clone your rails application into `data` folder keeping the Passangerfile.json secure.
 
 
-## Open terminal and execute `vagrant up`
+## Open terminal and execute `vagrant up --provision`
 
 go to [localhost:9001](http://localhost:9001/) and be happy! :p
