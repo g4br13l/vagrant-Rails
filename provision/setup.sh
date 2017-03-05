@@ -42,6 +42,12 @@ echo "ø installing mysql"
 apt-get install -y mysql-server
 apt-get install -y mysql-client
 apt-get install -y libmysqlclient-dev
+echo "ø installing npm and bower"
+apt-get install -y npm
+npm install -g bower
+echo "ø installing or updating dependent packages"
+npm install
+bower install
 echo "ø passenger preparing nginx server module to provider rails application"
 sudo fuser -k 80/tcp
 # service nginx start
