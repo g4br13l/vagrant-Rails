@@ -3,7 +3,7 @@
 
 ## Your Vagrant download the [ubuntu/xenial64](https://atlas.hashicorp.com/ubuntu/boxes/xenial64) box image on latest version
 
-## 1- Baixe  o Vagrant-Rails desse repositório e coloque numa pasta de fácil acesso
+### 1- Baixe  o Vagrant-Rails desse repositório e coloque numa pasta de fácil acesso
 
 ## 2- Tire o arquivo "Passengerfile.json" de dentro da pasta "data"
 
