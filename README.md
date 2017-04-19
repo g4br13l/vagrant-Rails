@@ -11,7 +11,7 @@
 
 ### 4- Volte o arquivo "Passengerfile.json" para a pasta "data" 
 
-### 5- Abra sua linha de comando como administrador e rode o comando "vagrant up --provision", O vagrant vai baixar o linux ubuntu ultima versão, instalar e vai baixar todas as dependências do projeto
+### 5- Abra sua linha de comando COMO ADMINISTRADOR e rode o comando "vagrant up --provision", O vagrant vai baixar o linux ubuntu ultima versão, instalar e vai baixar todas as dependências do projeto
 
 ### 6- Depois disso rode o comando "vagrant ssh" para entrar no ssh do seu vagrant, rode o comando "cd /home/vagrant/app" para viajar para a pasta "app" (essa pasta contém os mesmos arquivos que a pasta "data" de sua máquina real e vice-versa)
 
