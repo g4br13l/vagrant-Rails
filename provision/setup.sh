@@ -42,6 +42,9 @@ echo "ø installing mysql"
 apt-get install -y mysql-server
 apt-get install -y mysql-client
 apt-get install -y libmysqlclient-dev
+sudo sed -i "s/bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+mysql -uroot -psecret -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES;'  > /dev/null 2>&1
+sudo service mysql restart > /dev/null 2>&1
 echo "ø installing npm and bower"
 apt-get install -y npm
 npm install -g bower

@@ -9,8 +9,9 @@ Vagrant.configure("2") do |config|
     vb.memory = 2048
     vb.name = "railsbox"
   end
-  config.vm.network :forwarded_port, guest: 80, host: 9001
-  config.vm.network :forwarded_port, guest: 3306, host: 3307
+# config.vm.network :forwarded_port, guest: 80, host: 9001
+# config.vm.network :forwarded_port, guest: 3306, host: 3307
+  config.vm.network :private_network, ip: "192.168.56.101"
   config.vm.synced_folder "data", "/home/vagrant/app"
   config.vm.provision :shell, path: "provision/setup.sh"
 end
